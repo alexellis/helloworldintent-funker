@@ -3,6 +3,10 @@ A sample funker function for the space agency skill.
 
 Use this with [funker-dispatch](https://github.com/alexellis/funker-dispatch)
 
+This function goes off to [http://api.open-notify.org/astros.json](http://api.open-notify.org/astros.json) to find how many people are currently in space, then puts together an utterance for Alexa to speak out.
+
+After each request the container is recycled, but if you want to increase performance checkout the stateful branch with `git checkout stateful`. This dramatically increases the performance/output by using the `async` Node.js library to keep a perpetual loop going.
+
 Usage:
 ======
 
