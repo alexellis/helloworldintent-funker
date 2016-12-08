@@ -13,8 +13,9 @@ funker.handle(function(args, callback) {
 
   request.get(ops, (err, res, body) => {
     var speechOutput = "There's currently " + body.number + " people in space";
+    console.log(sample);
     sample.response.outputSpeech.text = speechOutput;
-    sample.card.content = speechOutput;
+    sample.response.card.content = speechOutput;
     callback(sample);
   });
 });
