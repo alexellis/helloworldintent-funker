@@ -7,7 +7,7 @@ This function goes off to [http://api.open-notify.org/astros.json](http://api.op
 
 After each request the container is recycled, but if you want to increase performance checkout the stateful branch with `git checkout stateful`. This dramatically increases the performance/output by using the `async` Node.js library to keep a perpetual loop going.
 
-Usage:
+x86_64 Usage:
 ======
 
 ```
@@ -19,3 +19,13 @@ docker build -t helloworldintent .
 
 docker service create --name HelloIntent --network funker helloworldintent
 ```
+
+Usage for ARM:
+======
+
+Same as above, but use the alternative Dockerfile:
+
+```
+docker build -t helloworldintent . -f Dockerfile.armhf
+```
+
